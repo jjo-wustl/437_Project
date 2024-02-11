@@ -13,6 +13,12 @@
 		C85BE2192B784718006DA235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85BE2182B784718006DA235 /* Preview Assets.xcassets */; };
 		C85BE21B2B784718006DA235 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85BE21A2B784718006DA235 /* Persistence.swift */; };
 		C85BE21E2B784718006DA235 /* LingoMingo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85BE21C2B784718006DA235 /* LingoMingo.xcdatamodeld */; };
+		C85BE2252B784C26006DA235 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = C85BE2242B784C26006DA235 /* readme.txt */; };
+		C85BE2292B784D6B006DA235 /* SpeakingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85BE2282B784D6B006DA235 /* SpeakingTestView.swift */; };
+		C85BE22B2B784D93006DA235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85BE22A2B784D93006DA235 /* HomeView.swift */; };
+		C85BE2302B784E23006DA235 /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85BE22F2B784E23006DA235 /* QuestionService.swift */; };
+		C85BE2322B784E65006DA235 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85BE2312B784E65006DA235 /* TestViewModel.swift */; };
+		C85BE2352B785547006DA235 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = C85BE2342B785547006DA235 /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,11 @@
 		C85BE2182B784718006DA235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C85BE21A2B784718006DA235 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C85BE21D2B784718006DA235 /* LingoMingo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LingoMingo.xcdatamodel; sourceTree = "<group>"; };
+		C85BE2242B784C26006DA235 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		C85BE2282B784D6B006DA235 /* SpeakingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingTestView.swift; sourceTree = "<group>"; };
+		C85BE22A2B784D93006DA235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C85BE22F2B784E23006DA235 /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
+		C85BE2312B784E65006DA235 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85BE2352B785547006DA235 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +67,16 @@
 		C85BE2102B784715006DA235 /* LingoMingo */ = {
 			isa = PBXGroup;
 			children = (
+				C85BE22E2B784DEA006DA235 /* OpenAI */,
+				C85BE2272B784C3F006DA235 /* ViewModel */,
+				C85BE2262B784C37006DA235 /* View */,
 				C85BE2112B784715006DA235 /* LingoMingoApp.swift */,
 				C85BE2132B784715006DA235 /* ContentView.swift */,
 				C85BE2152B784718006DA235 /* Assets.xcassets */,
 				C85BE21A2B784718006DA235 /* Persistence.swift */,
 				C85BE21C2B784718006DA235 /* LingoMingo.xcdatamodeld */,
 				C85BE2172B784718006DA235 /* Preview Content */,
+				C85BE2242B784C26006DA235 /* readme.txt */,
 			);
 			path = LingoMingo;
 			sourceTree = "<group>";
@@ -71,6 +87,31 @@
 				C85BE2182B784718006DA235 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C85BE2262B784C37006DA235 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C85BE2282B784D6B006DA235 /* SpeakingTestView.swift */,
+				C85BE22A2B784D93006DA235 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C85BE2272B784C3F006DA235 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C85BE2312B784E65006DA235 /* TestViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C85BE22E2B784DEA006DA235 /* OpenAI */ = {
+			isa = PBXGroup;
+			children = (
+				C85BE22F2B784E23006DA235 /* QuestionService.swift */,
+			);
+			path = OpenAI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +130,9 @@
 			dependencies = (
 			);
 			name = LingoMingo;
+			packageProductDependencies = (
+				C85BE2342B785547006DA235 /* OpenAI */,
+			);
 			productName = LingoMingo;
 			productReference = C85BE20E2B784715006DA235 /* LingoMingo.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +161,9 @@
 				Base,
 			);
 			mainGroup = C85BE2052B784715006DA235;
+			packageReferences = (
+				C85BE2332B785547006DA235 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = C85BE20F2B784715006DA235 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85BE2252B784C26006DA235 /* readme.txt in Resources */,
 				C85BE2192B784718006DA235 /* Preview Assets.xcassets in Resources */,
 				C85BE2162B784718006DA235 /* Assets.xcassets in Resources */,
 			);
@@ -144,9 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85BE21B2B784718006DA235 /* Persistence.swift in Sources */,
+				C85BE2302B784E23006DA235 /* QuestionService.swift in Sources */,
+				C85BE2322B784E65006DA235 /* TestViewModel.swift in Sources */,
 				C85BE2142B784715006DA235 /* ContentView.swift in Sources */,
 				C85BE21E2B784718006DA235 /* LingoMingo.xcdatamodeld in Sources */,
+				C85BE22B2B784D93006DA235 /* HomeView.swift in Sources */,
 				C85BE2122B784715006DA235 /* LingoMingoApp.swift in Sources */,
+				C85BE2292B784D6B006DA235 /* SpeakingTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C85BE2332B785547006DA235 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C85BE2342B785547006DA235 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C85BE2332B785547006DA235 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C85BE21C2B784718006DA235 /* LingoMingo.xcdatamodeld */ = {
